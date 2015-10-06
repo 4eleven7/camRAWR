@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VideoViewController" customModule="camRAWR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAg-cN-4ny" userLabel="Camera">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UV2-w6-I7n" userLabel="Face Views">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-at-EkA" userLabel="Controls">
+                                <rect key="frame" x="0.0" y="480" width="600" height="120"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.29411764709999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8Xn-ov-BxD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UV2-w6-I7n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="00c-5J-JWd"/>
+                            <constraint firstItem="kAg-cN-4ny" firstAttribute="centerX" secondItem="UV2-w6-I7n" secondAttribute="centerX" id="27Z-XI-ccP"/>
+                            <constraint firstItem="kAg-cN-4ny" firstAttribute="width" secondItem="UV2-w6-I7n" secondAttribute="width" id="3Ks-eJ-9aK"/>
+                            <constraint firstItem="UV2-w6-I7n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="46R-6o-Unz"/>
+                            <constraint firstItem="2z1-at-EkA" firstAttribute="top" secondItem="UV2-w6-I7n" secondAttribute="bottom" id="6wk-zg-3bv"/>
+                            <constraint firstItem="kAg-cN-4ny" firstAttribute="height" secondItem="UV2-w6-I7n" secondAttribute="height" id="7B3-7A-apy"/>
+                            <constraint firstItem="UV2-w6-I7n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="840-Qo-S3J"/>
+                            <constraint firstAttribute="bottom" secondItem="UV2-w6-I7n" secondAttribute="bottom" id="DeP-ap-nQD"/>
+                            <constraint firstItem="kAg-cN-4ny" firstAttribute="centerY" secondItem="UV2-w6-I7n" secondAttribute="centerY" id="Ile-1w-EKd"/>
+                            <constraint firstItem="UV2-w6-I7n" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="7:10" id="XVO-sa-Ts9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2z1-at-EkA" secondAttribute="bottom" id="faS-fu-lqY"/>
+                            <constraint firstItem="2z1-at-EkA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mFZ-qO-ufq"/>
+                            <constraint firstAttribute="trailing" secondItem="2z1-at-EkA" secondAttribute="trailing" id="n24-5k-p7U"/>
+                            <constraint firstAttribute="trailing" secondItem="UV2-w6-I7n" secondAttribute="trailing" id="s4o-sc-Awt"/>
+                            <constraint firstItem="2z1-at-EkA" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="tXp-40-toe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="840-Qo-S3J"/>
+                                <exclude reference="XVO-sa-Ts9"/>
+                                <exclude reference="6wk-zg-3bv"/>
+                                <exclude reference="tXp-40-toe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="facesView" destination="UV2-w6-I7n" id="LGS-Vv-H4f"/>
+                        <outlet property="previewView" destination="kAg-cN-4ny" id="33e-3S-gcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
